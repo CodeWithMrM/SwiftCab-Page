@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#fff;
+    color:#111;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+}
+
+.logo{
+    height:40px;
+    width: 100px;
+}
+
+.nav-btn,
+.cta-btn{
+    background:#1463ff;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    padding:50px 10%;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#1463ff;
+}
+
+.hero-content p{
+    max-width:500px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    max-width:500px;
+    width:100%;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:80px 10%;
+}
+
+.feature-card{
+    padding:30px;
+    border-radius:20px;
+    background:#f7f8fa;
+}
+
+.waitlist{
+    text-align:center;
+    padding:100px 10%;
+    background:#f5f8ff;
+}
+
+.waitlist h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.waitlist p{
+    margin-bottom:30px;
+}
+
+#waitlistForm{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    max-width:700px;
+    margin:auto;
+}
+
+#waitlistForm input{
+    flex:1;
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+}
+
+#waitlistForm button{
+    background:#1463ff;
+    color:white;
+    border:none;
+    padding:16px 30px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+#message{
+    margin-top:20px;
+    font-weight:600;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    #waitlistForm{
+        flex-direction:column;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+}
