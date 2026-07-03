@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
 
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const userType = document.getElementById("role").value;
+  const role = document.getElementById("role").value;
 
   spinner.classList.remove("hidden");
   submitBtn.disabled = true;
@@ -23,7 +23,7 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify({
         name,
         email,
-        userType,
+        role
       }),
     });
 
