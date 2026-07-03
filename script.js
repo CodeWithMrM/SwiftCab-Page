@@ -7,21 +7,29 @@ const SCRIPT_URL =
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
+  const role = document.getElementById("role").value;
 
   try {
     const response = await fetch(SCRIPT_URL, {
       method: "POST",
       body: JSON.stringify({
+        name,
         email,
+        role,
       }),
     });
 
     const data = await response.json();
 
-    message.innerHTML = "✅ Successfully joined!";
-    form.reset();
-  } catch (err) {
-    message.innerHTML = "❌ Something went wrong.";
+    if (data.success) {
+      message.textContent = "🎉 You're on the SwiftCab waitlist!";
+      form.reset();
+    } else {
+      message.textContent = data.message;
+    }
+  } catch (error) {
+    message.textContent = "Something went wrong. Please try again.";
   }
 });

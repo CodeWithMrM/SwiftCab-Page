@@ -126,6 +126,13 @@ body{
     cursor:pointer;
 }
 
+#waitlistForm select{
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+
+}
+
 #message{
     margin-top:20px;
     font-weight:600;
